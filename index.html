@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tharun Kumar Reddy</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            padding-top: 56px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        #home {
+            background-image: url('two.png');
+            /* Replace 'two.png' with your background image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            height: 100vh;
+        }
+        
+        #home .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        
+        .about-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+        }
+    </style>
+    <!-- CSS for hover effect -->
+    <style>
+        .project-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .project-img {
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        .project-item:hover .project-img {
+            transform: scale(0.95);
+        }
+    </style>
+
+    <!-- CSS for Timeline -->
+    <style>
+        .timeline {
+            position: relative;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .timeline:before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+            content: '';
+            width: 2px;
+            background-color: #e9ecef;
+        }
+        
+        .timeline>li {
+            position: relative;
+            min-height: 100px;
+            margin-bottom: 50px;
+        }
+        
+        .timeline>li:before,
+        .timeline>li:after {
+            content: " ";
+            display: table;
+        }
+        
+        .timeline>li:after {
+            clear: both;
+        }
+        
+        .timeline>li .timeline-panel {
+            position: relative;
+            width: 46%;
+            float: left;
+            padding: 0 20px 20px;
+            text-align: left;
+            border: 1px solid #d4d4d4;
+            border-radius: 2px;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .timeline>li .timeline-image {
+            position: absolute;
+            z-index: 100;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            margin-left: -50px;
+            border: 7px solid #e9ecef;
+            border-radius: 100%;
+            background-color: #fff;
+        }
+        
+        .timeline>li .timeline-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+        }
+        
+        .timeline>li.timeline-inverted .timeline-panel {
+            float: right;
+        }
+        
+        .timeline>li.timeline-inverted .timeline-image {
+            left: auto;
+            right: 50%;
+            margin-left: 0;
+            margin-right: -50px;
+        }
+        
+        .timeline-heading h4 {
+            margin-top: 0;
+            color: inherit;
+        }
+        
+        .timeline-heading .subheading {
+            margin-bottom: 0;
+            text-transform: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Tharun Kumar Reddy</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#timeline">Timeline</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="text-center">
+                <img src="tharun.jpg" alt="Profile Picture" class="profile-pic img-fluid">
+                <h1 class="display-4">Welcome to My Portfolio</h1>
+                <p class="lead">Explore my work and skills.</p>
+                <a href="#about" class="btn btn-primary">About Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-4 d-flex align-items-center justify-content-center order-lg-2 order-1">
+                    <img src="tharun.jpg" alt="Tharun Kumar Reddy" class="about-pic img-fluid">
+                </div>
+                <div class="col-sm-12 col-lg-8 order-lg-1 order-2" id="intro-section" style="margin-bottom: 1rem; margin-top:1rem">
+                    <h4>Tharun Kumar Reddy</h4>
+                    <p class="lead"><b>Python Developer, Tensorflow certified Developer, and AI/ML Researcher</b></p>
+                    <p class="lead" style="font-size: 14pt">I'm a graduate of MIT's Class of 2018 and my passion is Computer Science.
+                        <br/>My interests include software design and development, artificial intelligence, machine learning, computer vision, and natural language processing.</p>
+                    <p class="lead" style="font-size: 14pt">I'm currently a graduate student working towards my Master of Engineering (M.Eng.) degree in Computer Science/Artificial Intelligence.</p>
+                    <p class="lead" style="font-size: 15pt; margin-bottom:0px"><b>Massachusetts Institute of Technology (MIT)</b></p>
+                    <ul style="padding-left:30px">
+                        <li class="lead" style="font-size: 14pt"><b>Master of Engineering in Computer Science/Artificial Intelligence</b></li>
+                        <li class="lead" style="font-size: 14pt"><b>Bachelor of Science in Computer Science and Engineering</b></li>
+                        <li class="lead" style="font-size: 14pt">Certificate of Advanced Undergraduate Research in Artificial Intelligence and Machine Learning</li>
+                    </ul>
+                    <div id="social2" class="mt-4">
+                        <ul class="list-inline social-buttons text-center">
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/yourprofile" target="blank"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.linkedin.com/in/yourprofile" target="blank"><i class="fab fa-linkedin"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/yourprofile" target="blank"><i class="fab fa-github"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <!-- Skills Section -->
+    <section id="skills" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Skills</h2>
+                    <p class="text-muted">List of your skills and proficiencies.</p>
+                </div>
+            </div>
+            <div class="row text-center mt-4">
+                <div class="col-md-4">
+                    <div class="skill-item">
+                        <i class="fab fa-python fa-4x mb-3"></i>
+                        <h4 class="my-3">Python</h4>
+                        <p class="text-muted">Expert in Python programming, data analysis, and machine learning.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item">
+                        <i class="fab fa-js-square fa-4x mb-3"></i>
+                        <h4 class="my-3">JavaScript</h4>
+                        <p class="text-muted">Proficient in JavaScript, including frameworks such as React and Angular.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item">
+                        <i class="fab fa-database fa-4x mb-3"></i>
+                        <h4 class="my-3">Databases</h4>
+                        <p class="text-muted">Experience with SQL, NoSQL databases, and data warehousing solutions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center mt-4">
+                <div class="col-md-4">
+                    <div class="skill-item">
+                        <i class="fab fa-aws fa-4x mb-3"></i>
+                        <h4 class="my-3">AWS</h4>
+                        <p class="text-muted">Skilled in using AWS for cloud computing, storage, and database solutions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item">
+                        <i class="fab fa-html5 fa-4x mb-3"></i>
+                        <h4 class="my-3">HTML5 & CSS3</h4>
+                        <p class="text-muted">Proficient in modern web design using HTML5, CSS3, and Bootstrap.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item">
+                        <i class="fab fa-node-js fa-4x mb-3"></i>
+                        <h4 class="my-3">Node.js</h4>
+                        <p class="text-muted">Experience in building scalable applications using Node.js and Express.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Projects</h2>
+                    <p class="text-muted">Details of the projects you have worked on.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="project-item">
+                        <a href="project1.html">
+                            <img src="two.png" class="img-fluid project-img" alt="Project 1">
+                            <h4 class="my-3">Project 1</h4>
+                            <p class="text-muted">A brief description of Project 1. Highlight key features, technologies used, and the impact of the project.</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="project-item">
+                        <a href="project2.html">
+                            <img src="two.png" class="img-fluid project-img" alt="Project 2">
+                            <h4 class="my-3">Project 2</h4>
+                            <p class="text-muted">A brief description of Project 2. Highlight key features, technologies used, and the impact of the project.</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="project-item">
+                        <a href="project3.html">
+                            <img src="two.png" class="img-fluid project-img" alt="Project 3">
+                            <h4 class="my-3">Project 3</h4>
+                            <p class="text-muted">A brief description of Project 3. Highlight key features, technologies used, and the impact of the project.</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="project-item">
+                        <a href="project4.html">
+                            <img src="two.png" class="img-fluid project-img" alt="Project 4">
+                            <h4 class="my-3">Project 4</h4>
+                            <p class="text-muted">A brief description of Project 4. Highlight key features, technologies used, and the impact of the project.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="project-item">
+                        <a href="project5.html">
+                            <img src="two.png" class="img-fluid project-img" alt="Project 5">
+                            <h4 class="my-3">Project 5</h4>
+                            <p class="text-muted">A brief description of Project 5. Highlight key features, technologies used, and the impact of the project.</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="project-item">
+                        <a href="project6.html">
+                            <img src="two.png" class="img-fluid project-img" alt="Project 6">
+                            <h4 class="my-3">Project 6</h4>
+                            <p class="text-muted">A brief description of Project 6. Highlight key features, technologies used, and the impact of the project.</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="project-item">
+                        <a href="project7.html">
+                            <img src="two.png" class="img-fluid project-img" alt="Project 7">
+                            <h4 class="my-3">Project 7</h4>
+                            <p class="text-muted">A brief description of Project 7. Highlight key features, technologies used, and the impact of the project.</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="project-item">
+                        <a href="project8.html">
+                            <img src="two.png" class="img-fluid project-img" alt="Project 8">
+                            <h4 class="my-3">Project 8</h4>
+                            <p class="text-muted">A brief description of Project 8. Highlight key features, technologies used, and the impact of the project.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Timeline</h2>
+                    <p class="text-muted">Your career timeline and milestones.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="two.png" alt="Event 1">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2018-2019</h4>
+                                    <h4 class="subheading">Started My Career</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Started my journey as a Software Engineer at XYZ Company, working on various projects involving AI and machine learning.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="two.png" alt="Event 2">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2019-2020</h4>
+                                    <h4 class="subheading">Project Lead</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Promoted to Project Lead and successfully led a team of developers in creating innovative solutions for clients.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="two.png" alt="Event 3">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2020-2021</h4>
+                                    <h4 class="subheading">Major Milestone</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Achieved a major milestone by completing a high-profile project that received industry recognition.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="two.png" alt="Event 4">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2021-Present</h4>
+                                    <h4 class="subheading">Current Position</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Currently working as a Senior Software Engineer, focusing on advanced AI and ML projects, and mentoring junior developers.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>Be Part
+                                    <br>Of My
+                                    <br>Story!</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Portfolio 2024</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
